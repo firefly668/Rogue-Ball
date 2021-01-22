@@ -23,10 +23,10 @@ public class playmovement : MonoBehaviour
     {
         if (gyinfo)
         {
-            if(rb2d.velocity.magnitude<=6){
+            if(rb2d.velocity.magnitude<=4){
                 float X = (float)Math.Round(go.attitude.x,3);
                 float Y = (float)Math.Round(go.attitude.y,3);
-                Vector2 a = new Vector2(X*10,Y*10);
+                Vector2 a = new Vector2(X*25,Y*25);
                 rb2d.AddForce(a);
             }
             draw = false;
@@ -36,6 +36,21 @@ public class playmovement : MonoBehaviour
         {
             draw = true;
         }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag=="enemy")
+        {
+           Destroy(other.gameObject);
+        }
+    }
+    void Update()
+    {
+        int movespeed = 5;
+        float x = Input.GetAxis("Vertical");
+        float y = Input.GetAxis("Horizontal");
+        Vector3 v = new Vector3(y,x,0);
+        this.transform.Translate(v*Time.deltaTime*movespeed);
     }
     void OnGUI()
     {
