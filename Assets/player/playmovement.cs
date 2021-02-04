@@ -41,7 +41,7 @@ public class playmovement : MonoBehaviour
     {
         if(other.tag=="enemy")
         {
-           Destroy(other.gameObject);
+            other.GetComponent<Enemy>().TakeDemage(5);
         }
     }
     void Update()
