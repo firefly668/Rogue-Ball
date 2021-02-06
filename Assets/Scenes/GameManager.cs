@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public bool initial = true;
     public delegate void Begin();
     public event Begin begin;
+    public int KillNumber = 0;
+    public int TargetNumber = 10;
     // Start is called before the first frame update
     private void Awake(){
         Instantiate(player,new Vector3(0,0,-0.1f),new Quaternion(0,0,0,0));

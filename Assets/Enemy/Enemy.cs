@@ -16,14 +16,16 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp <= 0)
-        {
-            Destroy(gameObject);
-        }
+
     }
 
     public void TakeDemage(int demage)
     {
         hp -= demage;
+        if (hp <= 0)
+        {
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().KillNumber++;
+            Destroy(gameObject);
+        }
     }
 }

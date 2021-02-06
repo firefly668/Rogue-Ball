@@ -14,10 +14,10 @@ public class Enemymove : MonoBehaviour
 
     void Update()
     {
-        float x = 1f;
-        float y = 1f;
-        //float x = Random.Range(-1.5f, 1.5f);
-        //float y = Random.Range(-1.5f,1.5f);
+        //float x = 1f;
+        //float y = 1f;
+        float x = Random.Range(-1.5f, 1.5f);
+        float y = Random.Range(-1.5f,1.5f);
         Vector3 newPos = transform.position + new Vector3(x, y, 0) * speed * Time.deltaTime;
         if (newPos.x < -19.28 || newPos.x > 19.28)
         {
