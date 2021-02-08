@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5389499219105198070}
   - component: {fileID: 5389499219105198071}
   - component: {fileID: 4415776810514016098}
+  - component: {fileID: 6478236212308753358}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -149,3 +150,21 @@ MonoBehaviour:
   MaxHp: 200
   Hp: 0
   Melee: 0
+  propsproducer: {fileID: 0}
+--- !u!114 &6478236212308753358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389499219105198059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e8248745f3b4647bda7d0c2abf48c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prop01: {fileID: 8737366519151360264, guid: b1c9d21dab8d5734281ec368c6ea21e7, type: 3}
+  prop02: {fileID: 6649589291815053571, guid: b8380990e6cefe8478e8a6b4d1647014, type: 3}
+  prop03: {fileID: 1463144982967986771, guid: 8c622e6778c95084e91b2f83f2af6d64, type: 3}
+  prop04: {fileID: 8420618099190214890, guid: 3c1080d8fcfcf1046bebd36a1f86612c, type: 3}
+  prop05: {fileID: 7994159199081980362, guid: 6f9d903104727e540a773f3cab13cd39, type: 3}
