@@ -37,13 +37,18 @@ public class playmovement : MonoBehaviour
             draw = true;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject.tag=="enemy"){
+            other.gameObject.GetComponent<Enemy>().TakeDemage(5);
+        }
+    }
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag=="enemy")
         {
-           Destroy(other.gameObject);
+            other.GetComponent<Enemy>().TakeDemage(5);
         }
-    }
+    }*/
     void Update()
     {
         int movespeed = 5;
